@@ -1,7 +1,5 @@
 package blui;
 
-import arc.*;
-
 public class BLVars{
     public static float pressTimer = 0;
     public static float longPress = 30;

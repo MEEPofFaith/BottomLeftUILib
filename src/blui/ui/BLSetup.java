@@ -8,13 +8,11 @@ import arc.struct.*;
 import arc.util.*;
 import blui.*;
 import blui.scene.ui.*;
-import mindustry.*;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
-import mindustry.world.meta.*;
 
-import static mindustry.Vars.*;
 import static arc.Core.*;
+import static mindustry.Vars.*;
 
 public class BLSetup{
     private static Element bluiTable;
