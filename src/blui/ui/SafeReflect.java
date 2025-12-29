@@ -3,8 +3,6 @@ package blui.ui;
 import arc.util.*;
 import mindustry.*;
 
-import java.lang.reflect.*;
-
 /**@author Smolkeys */
 public class SafeReflect{
     protected static <T> T get(Class<?> type, Object object, String name){

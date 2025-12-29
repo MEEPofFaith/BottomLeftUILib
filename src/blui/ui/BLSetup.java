@@ -61,8 +61,18 @@ public class BLSetup{
      * Offsets the position of a table in the bottom-left corner of the screen
      * to account for the command mode button on mobile being there.
      */
-    public static void offset(Table table){
+    public static void mobileOffset(Table table){
         if(mobile) table.moveBy(0f, Scl.scl(46f));
+    }
+
+    /**
+     * Offsets the position of a table in the bottom-left corner of the screen
+     * by a custom amount
+     */
+    public static void customOffset(Table table, float xOff, float yOff, boolean addMobileOffset){
+        table.setPosition(0, 0);
+        table.moveBy(xOff, yOff);
+        if(addMobileOffset) mobileOffset(table);
     }
 
     private static class BLUITable extends Table{
@@ -101,7 +111,7 @@ public class BLSetup{
 
             Events.on(ClientLoadEvent.class, e -> {
                 next();
-                offset(this);
+                mobileOffset(this);
             });
         }
 
