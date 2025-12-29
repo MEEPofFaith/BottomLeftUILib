@@ -17,7 +17,7 @@ import static mindustry.Vars.*;
 public class BLSetup{
     private static Element bluiTable;
 
-    private static Element getBluiTable(){
+    public static Element getBLUITable(){
         if(bluiTable != null) return bluiTable;
 
         BLStyles.init();
@@ -44,7 +44,7 @@ public class BLSetup{
     }
 
     public static void addTable(Cons<Table> t, Boolp visible){
-        Element bluiTable = getBluiTable();
+        Element bluiTable = getBLUITable();
         Class<?> bluiTableClass = SafeReflect.clazz(settings.getString("blui-table-class"));
 
         Seq<Cons<Table>> tables = SafeReflect.get(bluiTableClass, bluiTable, "tables");
